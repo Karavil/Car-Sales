@@ -1,5 +1,5 @@
 import React from "react";
-import { useStore } from "react-redux";
+import { useSelector } from "react-redux";
 
 import AdditionalFeatures from "./AdditionalFeatures";
 import Total from "./Total";
@@ -22,7 +22,7 @@ const StyledCard = styled(Card)`
 `;
 
 const FeaturesAndTotal = () => {
-   const { car, possibleFeatures } = useStore().getState();
+   const { car, possibleFeatures } = useSelector(state => state);
 
    return (
       <StyledCard>

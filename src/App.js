@@ -1,7 +1,6 @@
 import React from "react";
 
 import styled, { createGlobalStyle } from "styled-components";
-import { Card } from "./styles/Cards";
 
 import CarInfo from "./components/CarCheckout/CarInfo";
 import FeaturesAndTotal from "./components/CarCheckout/FeaturesAndTotal";

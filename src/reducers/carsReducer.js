@@ -1,3 +1,5 @@
+import { ADD_FEATURE, REMOVE_FEATURE } from "../actions/carActions";
+
 const initialState = {
    car: {
       basePrice: 26395,
@@ -16,10 +18,26 @@ const initialState = {
 
 const carsReducer = (state = initialState, action) => {
    switch (action.type) {
-      case "INCREMENT":
-         return state + 1;
-      case "DECREMENT":
-         return state - 1;
+      case ADD_FEATURE:
+         console.log("ADDING FEATURE:", action.payload);
+         return {
+            ...state,
+            car: {
+               ...state.car,
+               features: [...state.car.features, action.payload]
+            }
+         };
+      case REMOVE_FEATURE:
+         console.log("REMOVING FEATURE:", action.payload);
+         return {
+            ...state,
+            car: {
+               ...state.car,
+               features: state.car.features.filter(
+                  feature => feature.id !== action.payload
+               )
+            }
+         };
       default:
          return state;
    }
