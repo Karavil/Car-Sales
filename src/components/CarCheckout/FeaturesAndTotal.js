@@ -14,7 +14,7 @@ const StyledCard = styled(Card)`
    justify-content: space-between;
    text-align: right;
 
-   width: 40%;
+   width: auto;
 
    ul {
       list-style-type: none;

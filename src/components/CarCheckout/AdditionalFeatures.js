@@ -3,7 +3,7 @@ import AdditionalFeature from "./AdditionalFeature";
 
 const AdditionalFeatures = ({ possibleFeatures }) => {
    return (
-      <>
+      <div>
          <h4>Additional Features</h4>
          {possibleFeatures.length ? (
             <ul>
@@ -14,7 +14,7 @@ const AdditionalFeatures = ({ possibleFeatures }) => {
          ) : (
             <p>Nice looking car!</p>
          )}
-      </>
+      </div>
    );
 };
 

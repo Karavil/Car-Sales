@@ -10,11 +10,9 @@ import { Card } from "../../styles/Cards";
 const StyledCard = styled(Card)`
    display: flex;
    flex-direction: column;
-   flex-wrap: wrap;
-   justify-content: space-evenly;
-   margin: 0 auto;
+   width: 64.5%;
 
-   width: 40%;
+   padding: 0;
 `;
 
 const FeaturesAndTotal = () => {

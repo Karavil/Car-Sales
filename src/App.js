@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
       margin: 0;
 
       font-family: 'Oswald', sans-serif;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       letter-spacing: 0.02rem;
    }
 
@@ -41,9 +41,14 @@ const GlobalStyle = createGlobalStyle`
 
 `;
 
-const CarContainer = styled(Card)`
+const CarContainer = styled.div`
    display: flex;
-   flex-wrap: wrap;
+   max-width: 1000px;
+   margin: 0 auto;
+
+   justify-content: space-between;
+
+   padding: 50px 0;
 `;
 
 const App = () => {
