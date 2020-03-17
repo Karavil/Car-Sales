@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
 
-const Total = props => {
-  return (
-    <div className="content">
-      <h4>Total Amount: ${props.car.price + props.additionalPrice}</h4>
-    </div>
-  );
+const Total = ({ basePrice, features }) => {
+   let featuresCost = 0;
+   features.forEach(feature => (featuresCost += feature.price));
+   return <h4>Total Amount: ${basePrice + featuresCost}</h4>;
 };
 
 export default Total;

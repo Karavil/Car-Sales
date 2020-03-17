@@ -1,11 +1,12 @@
 import React from "react";
 
-const Header = props => {
+const Header = ({ car }) => {
+   console.log("Car (Header)", car);
    return (
       <>
-         <img src={props.car.image} alt={props.car.name} />
-         <h2>{props.car.name}</h2>
-         <p>Amount: ${props.car.price}</p>
+         <img src={car.image} alt={car.name} />
+         <h2>{car.name}</h2>
+         <p>Amount: ${car.basePrice}</p>
       </>
    );
 };
