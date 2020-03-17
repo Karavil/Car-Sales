@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, shallowEqual } from "react-redux";
 
 import AdditionalFeatures from "./AdditionalFeatures";
 import Total from "./Total";
@@ -22,7 +22,7 @@ const StyledCard = styled(Card)`
 `;
 
 const FeaturesAndTotal = () => {
-   const { car, possibleFeatures } = useSelector(state => state);
+   const { car, possibleFeatures } = useSelector(state => state, shallowEqual);
 
    return (
       <StyledCard>

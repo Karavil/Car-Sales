@@ -1,9 +1,13 @@
 import React from "react";
+import { useSelector, shallowEqual } from "react-redux";
+
 import AdditionalFeature from "./AdditionalFeature";
 
-import { useSelector } from "react-redux";
 const AdditionalFeatures = ({ possibleFeatures }) => {
-   const currentFeatures = useSelector(state => state.car.features);
+   const currentFeatures = useSelector(
+      state => state.car.features,
+      shallowEqual
+   );
 
    const featureList = possibleFeatures.map(feature => {
       const isAlreadyAdded = currentFeatures.includes(feature);
